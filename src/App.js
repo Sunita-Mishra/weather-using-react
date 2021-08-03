@@ -1,22 +1,23 @@
-import React, { Component } from 'react';
-import './component/style.css'
-
-
-
+import React, {useState } from 'react';
+import './component/style.css';
+import {WeatherContext} from "./helpers/context";
+import Content from './component/content';
 import Nav from './component/nav';
 
- class App extends Component {
-  render() {
-    return (
-      <div className="App">
+function App() {
+  const[city,setCity]=useState("")
+  const[showdata,setshowdata]=useState(false)
+  return (
+    <div className="App">
+      <WeatherContext.Provider value={{city,setCity,showdata,setshowdata}}>
         <Nav/>
-        
-        
-      </div>
-    );
-  }
+        {showdata && <Content />}
+       </WeatherContext.Provider>
+    </div>
+  )
 }
 
-export default App;
+export default App
+
 
 

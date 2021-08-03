@@ -1,28 +1,34 @@
-import React,{useEffect, useState} from 'react'
-
+import React ,{useContext,useEffect, useState}from 'react';
+import {WeatherContext} from "../helpers/context"
 
 function Content() {
-    const[city,setCity]=useState(null);
-    const [search, setSearch] = useState("mumbai");
-    var details;
+    const{city}=useContext(WeatherContext)
+    // const[wind,setwind]=useState();
+    const[weatherdetails,setweatherdetails]=useState({})
+    // const [search, setSearch] = useState("");
     useEffect(()=>
-    fetch( `https://api.openweathermap.org/data/2.5/weather?q=${search} &appid=93cfd80ca7b68a32492f5c4ec19fad97`)
+    fetch( `https://api.openweathermap.org/data/2.5/weather?q=${city} &appid=93cfd80ca7b68a32492f5c4ec19fad97`)
     .then((response)=>{
     return response.json();})
     .then((data)=>
     {
         console.log(data);
-       // setCity(data);
-    }),[])
-    
-
+        let weatherdata={
+            wind:data.wind.speed,
+            pressure:data.main.pressure,
+            humidity:data.main.humidity,
+            temperature: data.main.temp,
+            visibility:data.visibility
+        }
+        setweatherdetails(weatherdata);
+    }),[city])
     return (
         <div>
             <div className="location">
-                <p> LOCATION:</p>
+                <p> LOCATION: {city}</p>
             </div>
             <div className="location">
-                <div>  Wind speed:20m/s </div>     <div>   Pressure:10125h Pa</div>
+                <div>  Wind speed:{weatherdetails.wind}m/s </div>     <div>   Pressure:{weatherdetails.pressure} Pa</div>
             </div>
             <div className="card">
                 <div>
@@ -30,7 +36,7 @@ function Content() {
                         Humidity
                     </div>
                     <div>
-                        13%
+                    {weatherdetails.humidity}%
                     </div>
                 </div>
                 <div>
@@ -38,7 +44,7 @@ function Content() {
                         Temperature
                     </div>
                     <div>
-                        40°C
+                    {weatherdetails.temperature}°C
                     </div>
                 </div>
 
@@ -50,7 +56,7 @@ function Content() {
                         Visibility
                     </div>
                     <div>
-                        02km
+                    {weatherdetails.visibility}km
                     </div>
                 </div>
             </div>
