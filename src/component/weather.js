@@ -18,45 +18,50 @@ function Content() {
             pressure:data.main.pressure,
             humidity:data.main.humidity,
             temperature: data.main.temp,
-            visibility:data.visibility
+            visibility:data.visibility,
+            icon:data.weather[0].icon,
+            sky:data.weather[0].main
         }
+        
         setweatherdetails(weatherdata);
     }),[city])
     return (
         <div>
             <div className="location">
-                <p> LOCATION: {city}</p>
+               <div> <p> LOCATION: {city}({weatherdetails.sky})</p></div> <div><img src={` http://openweathermap.org/img/wn/${weatherdetails.icon}@2x.png`}></img></div>
             </div>
-            <div className="location">
-                <div>  Wind speed:{weatherdetails.wind}m/s </div>     <div>   Pressure:{weatherdetails.pressure} Pa</div>
+            <div className="details">
+                <div>  Wind speed:{weatherdetails.wind}m/s </div>     <div>   Pressure:{weatherdetails.pressure} hPa</div>
+                
             </div>
             <div className="card">
-                <div>
-                    <div>
+                <div className="humidity">
+                    
+                    <div >
                         Humidity
                     </div>
-                    <div>
+                    <div className="values"> 
                     {weatherdetails.humidity}%
                     </div>
                 </div>
-                <div>
+                <div className="temp">
                     <div>
                         Temperature
                     </div>
-                    <div>
-                    {weatherdetails.temperature}°C
+                    <div className="values">
+                    {weatherdetails.temperature}K
                     </div>
                 </div>
 
 
 
 
-                <div>
+                <div className="visi">
                     <div>
                         Visibility
                     </div>
-                    <div>
-                    {weatherdetails.visibility}km
+                    <div className="values">
+                    {weatherdetails.visibility}m
                     </div>
                 </div>
             </div>

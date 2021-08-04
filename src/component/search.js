@@ -10,7 +10,7 @@ function Nav() {
         setshowdata(true)
     }
     return (
-        <div className="back">
+        <div>
             <div className="header">
                 <div className="content">
                     <h1>LOGO</h1>
