@@ -1,5 +1,8 @@
 import React ,{useContext,useEffect, useState}from 'react';
-import {WeatherContext} from "../helpers/context"
+import {WeatherContext} from "../helpers/context";
+import humidity from "./humidity.png";
+import temperature from "./temperature.png";
+import Visibility from "./visibility.png";
 
 function Content() {
     const{city}=useContext(WeatherContext)
@@ -36,6 +39,9 @@ function Content() {
             </div>
             <div className="card">
                 <div className="humidity">
+                    <div>
+                        <img className="img" src={humidity}></img>
+                    </div>
                     
                     <div >
                         Humidity
@@ -45,6 +51,9 @@ function Content() {
                     </div>
                 </div>
                 <div className="temp">
+                <div>
+                        <img className="img" src={temperature}></img>
+                    </div>
                     <div>
                         Temperature
                     </div>
@@ -57,6 +66,9 @@ function Content() {
 
 
                 <div className="visi">
+                <div>
+                        <img className="img" src={Visibility} ></img>
+                    </div>
                     <div>
                         Visibility
                     </div>

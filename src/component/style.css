@@ -8,7 +8,7 @@
 .App{
     height: 100vh;
     width: 100vw;
-    background-image: url('https://source.unsplash.com/1600x900/?weather');
+    background-image: url('bg.png');
     background-size: 100% 100%;
     box-sizing: border-box;
 
@@ -27,17 +27,18 @@
 .main{
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
-    height: 35vh;
+    height: auto;
     color: white;
     font-size: 2vw;
     font-weight: bolder;
     width: 100vw;
     text-shadow: 0.2vw 0.2vw black;
-    margin-top: 1.4vh;
+    margin-top: 20vh;
 }
 .try{
-    margin-left: 20vw;
+    text-align: center;
 
 }
 .location{
@@ -63,10 +64,13 @@
 }
 .card{
     display: flex;
-    justify-content: space-evenly;
-margin-top: 0.9%;
+    justify-content: space-around;
+margin-top: 3%;
     color: white;
+    flex-wrap: wrap;
+    
 }
+
 
 .input{
     padding-right: 20vw;
@@ -84,7 +88,7 @@ margin-top: 0.9%;
    width: 4vw;
    color: white;
    background-color: rgb(79, 188, 170 );
-   margin-right: 4vw;
+   
    font-weight: bolder;
    border: none;
    border-radius: 2%;
@@ -93,48 +97,43 @@ margin-top: 0.9%;
 }
 
 .humidity{
-    border:0.1vw solid black;
+    border:0.1vw solid white;
     width: 15%;
     text-align: center;
-    height: 33vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     font-weight: bolder;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10%;
-    border-top: 0.1vw solid rgba(255, 255, 255, 0.5);
-    border-left: 0.1vw solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0.6vw 0.6vw 0.6vw rgba(255, 255, 255, 0.5);
+    
     backdrop-filter: blur(0.5vw);
     font-size: 1.5vw;
-    text-shadow: 0.2vw 0.2vw black;
+    
 
 }
 .temp{
-    border:0.1vw solid black;
+    border:0.1vw solid white;
    width: 15%;
    text-align: center;
    height:auto;
    display: flex;
    flex-direction: column;
-   justify-content: space-evenly;
+   justify-content: space-around;
    font-weight: bolder;
-   background-color: rgba(255, 255, 255, 0.1);
-   border-top: 0.1vw solid rgba(255, 255, 255, 0.5);
-   border-left: 0.1vw solid rgba(255, 255, 255, 0.5);
-   box-shadow: 0.6vw 0.6vw 0.6vw rgba(255, 255, 255, 0.5);
+   
    border-radius: 10%;
    backdrop-filter: blur(0.5vw);
    font-size: 1.5vw;
-   text-shadow: 0.2vw 0.2vw black;
+   
    
 
 }
 
 
 .visi{
-    border:0.1vw solid black;
+    border:0.1vw solid white;
     width: 15%;
     height: auto;
     text-align: center;
@@ -143,19 +142,18 @@ margin-top: 0.9%;
     justify-content: space-evenly;
     font-weight: bolder;
     background-color: rgba(255, 255, 255, 0.1);
-    border-top: 0.1vw solid rgba(255, 255, 255, 0.5);
-   border-left: 0.1vw solid rgba(255, 255, 255, 0.5);
-   box-shadow: 0.6vw 0.6vw 0.6vw rgba(255, 255, 255, 0.5);
+    
    border-radius: 10%;
    backdrop-filter: blur(0.5vw);
    font-size: 1.5vw;
-   text-shadow: 0.2vw 0.2vw black;
-
+   
 }
 .values{
     font-size: 3vw;
-    text-shadow: 0.2vw 0.2vw red;
+    margin-bottom: 2%;
 }
+    
+
 
 
    
@@ -169,182 +167,265 @@ margin-top: 0.9%;
   .heading{
       margin-left: 10vw;
   }
-  .try{
-      margin-left: 32vw;
-  }
+  
   
 }
 .humidity{
-    border:0.1vw solid black;
-    width: 30%;
+    border:0.1vw solid white;
+    width:25%;
     text-align: center;
-    height: 33vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     font-weight: bolder;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10%;
-    border-top: 0.1vw solid rgba(255, 255, 255, 0.5);
-    border-left: 0.1vw solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0.6vw 0.6vw 0.6vw rgba(255, 255, 255, 0.5);
+    
     backdrop-filter: blur(0.5vw);
-    font-size: 2vw;
-    text-shadow: 0.2vw 0.2vw black;
+    font-size: 3vw;
+    
 
 }
 .visi{
-    border:0.1vw solid black;
-    width: 30%;
+    border:0.1vw solid white;
+    width: 25%;
     text-align: center;
-    height: 33vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     font-weight: bolder;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10%;
-    border-top: 0.1vw solid rgba(255, 255, 255, 0.5);
-    border-left: 0.1vw solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0.6vw 0.6vw 0.6vw rgba(255, 255, 255, 0.5);
+    
     backdrop-filter: blur(0.5vw);
-    font-size: 2vw;
-    text-shadow: 0.2vw 0.2vw black;
+    font-size: 3vw;
+    
 
 }
 .temp{
-    border:0.1vw solid black;
-    width: 30%;
+    border:0.1vw solid white;
+    width: 25%;
     text-align: center;
-    height: 33vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     font-weight: bolder;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10%;
-    border-top: 0.1vw solid rgba(255, 255, 255, 0.5);
-    border-left: 0.1vw solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0.6vw 0.6vw 0.6vw rgba(255, 255, 255, 0.5);
+    
     backdrop-filter: blur(0.5vw);
-    font-size: 2vw;
-    text-shadow: 0.2vw 0.2vw black;
+    font-size: 3vw;
+    
+    
 
 }
+.img{
+    height: 8vh;
+}
 .values{
-    font-size: 3vw;
+    font-size: 4.5vw;
+    margin-bottom: 20%
 }
 .details{
-    font-size: 1.5vw;
+    font-size: 2vw;
 }
 .location{
     font-size: 1.5vw;
 }
 .heading{
     font-size: 4vw;
-    margin-left: 0.7vw;
+   
 }
 .try{
     font-size: 4vw;
-    margin-left: 30vw;
+   
 }
-.city{
-    margin-left: 21vw;
-}
-@media(max-width:500px)
-{
-    .search{
-        height: 3.6vh;
-        width: 11vw;
-    }
-    .humidity{
-        border:0.1vw solid black;
-        width: 30%;
-        text-align: center;
-        height: 33vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        font-weight: bolder;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10%;
-        border-top: 0.1vw solid rgba(255, 255, 255, 0.5);
-        border-left: 0.1vw solid rgba(255, 255, 255, 0.5);
-        box-shadow: 0.6vw 0.6vw 0.6vw rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(0.5vw);
-        font-size: 4.5vw;
-        text-shadow: 0.2vw 0.2vw black;
+
+@media(max-width:500px){
     
-    }
-    .visi{
-        border:0.1vw solid black;
-        width: 30%;
-        text-align: center;
-        height: 33vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        font-weight: bolder;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10%;
-        border-top: 0.1vw solid rgba(255, 255, 255, 0.5);
-        border-left: 0.1vw solid rgba(255, 255, 255, 0.5);
-        box-shadow: 0.6vw 0.6vw 0.6vw rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(0.5vw);
-        font-size: 4.5vw;
-        text-shadow: 0.2vw 0.2vw black;
-    
-    }
-    .city{
-        margin-left: 35px;
-    }
-    .temp{
-        border:0.1vw solid black;
-        width: 30%;
-        text-align: center;
-        height: 33vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        font-weight: bolder;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10%;
-        border-top: 0.1vw solid rgba(255, 255, 255, 0.5);
-        border-left: 0.1vw solid rgba(255, 255, 255, 0.5);
-        box-shadow: 0.6vw 0.6vw 0.6vw rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(0.5vw);
-        font-size: 4.5vw;
-        text-shadow: 0.2vw 0.2vw black;
-    
-    }
-    .values{
-        font-size: 5.5vw;
-    }
-    .details{
-        font-size: 3.5vw;
-    }
-    .location{
-        font-size: 4vw;
-    }
-    .heading{
-        font-size: 4.5vw;
-    }
-    .try{
-        font-size: 4.5vw;
-    }
-}
-@media(max-width:375px){
-    
-        .city{
-            margin-top: 15px;
-            margin-left: 10px;
-        }
         .search{
+            height: 3.4vh;
             width: 15vw;
-            height: 3.6vh;
         }
+        .humidity{
+            border:0.1vw solid white;
+            width: 50.1%;
+            text-align: center;
+            height: 15vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-weight: bolder;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10%;
+           
+            backdrop-filter: blur(0.5vw);
+            font-size: 3.5vw;
+            
+            margin-bottom: 1vh;
+        
+        }
+        .visi{
+            border:0.1vw solid white;
+            width: 50.1%;
+            text-align: center;
+            height: 14vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-weight: bolder;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10%;
+            margin-bottom: 1vh;
+            backdrop-filter: blur(0.5vw);
+            font-size: 3.5vw;
+            
+    
+        
+        }
+        .temp{
+            border:0.1vw solid white;
+            width: 50.1%;
+            text-align: center;
+            height: 14vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-weight: bolder;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10%;
+           
+            backdrop-filter: blur(0.5vw);
+            font-size: 3.5vw;
+            margin-bottom: 1vh;
+        
+        }
+        .img{
+            height:5vh;
+        }
+        
+        .values{
+            font-size: 4vw;
+            margin-bottom: 0%;
+        }
+        .details{
+            font-size: 3.5vw;
+        }
+        .location{
+            font-size: 4vw;
+        }
+        .heading{
+            font-size: 4.5vw;
+        }
+        .try{
+            font-size: 4.5vw;
+        }
+    
+    .card{
+        display: flex;
+        justify-content: space-around;
+    margin-top: 2%;
+        color: white;
+        flex-wrap: wrap;
+        
+    }
+}
+    
+@media(max-width:376px){
+    
+        .search{
+            height: 3.4vh;
+            width: 15vw;
+        }
+        .humidity{
+            border:0.1vw solid white;
+            width: 55%;
+            text-align: center;
+            height: 14vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-weight: bolder;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10%;
+           
+            backdrop-filter: blur(0.5vw);
+            font-size: 4.5vw;
+            
+            margin-bottom: 1vh;
+        
+        }
+        .visi{
+            border:0.1vw solid white;
+            width: 55%;
+            text-align: center;
+            height: 14vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-weight: bolder;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10%;
+            margin-bottom: 1vh;
+            backdrop-filter: blur(0.5vw);
+            font-size: 4.5vw;
+            
+    
+        
+        }
+        .temp{
+            border:0.1vw solid white;
+            width: 55%;
+            text-align: center;
+            height: 14vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-weight: bolder;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10%;
+           
+            backdrop-filter: blur(0.5vw);
+            font-size: 4.5vw;
+            margin-bottom: 1vh;
+        
+        }
+        .img{
+            height:5vh;
+        }
+    
+        
+        .values{
+            font-size: 5vw;
+            margin-bottom: 0%;
+        }
+        .details{
+            font-size: 3.5vw;
+        }
+        .location{
+            font-size: 4vw;
+        }
+        .heading{
+            font-size: 4.5vw;
+        }
+        .try{
+            font-size: 4.5vw;
+        }
+        .card{
+            display: flex;
+            justify-content: space-around;
+        margin-top: 2%;
+            color: white;
+            flex-wrap: wrap;
+            
+        }
+        
     }
 
+        
 @media(max-width:320px)
 {
     .search{
@@ -352,64 +433,74 @@ margin-top: 0.9%;
         width: 15vw;
     }
     .humidity{
-        border:0.1vw solid black;
-        width: 30%;
+        border:0.1vw solid white;
+        width: 55%;
         text-align: center;
-        height: 33vh;
+        height: 14vh;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         font-weight: bolder;
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 10%;
-        border-top: 0.1vw solid rgba(255, 255, 255, 0.5);
-        border-left: 0.1vw solid rgba(255, 255, 255, 0.5);
-        box-shadow: 0.6vw 0.6vw 0.6vw rgba(255, 255, 255, 0.5);
+       
         backdrop-filter: blur(0.5vw);
         font-size: 4.5vw;
-        text-shadow: 0.2vw 0.2vw black;
+        
+        margin-bottom: 2vh;
     
     }
+    .card{
+        display: flex;
+        justify-content: space-around;
+    margin-top: 2%;
+        color: white;
+        flex-wrap: wrap;
+        
+    }
+    
     .visi{
-        border:0.1vw solid black;
-        width: 30%;
+        border:0.1vw solid white;
+        width: 55%;
         text-align: center;
-        height: 33vh;
+        height: 14vh;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         font-weight: bolder;
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 10%;
-        border-top: 0.1vw solid rgba(255, 255, 255, 0.5);
-        border-left: 0.1vw solid rgba(255, 255, 255, 0.5);
-        box-shadow: 0.6vw 0.6vw 0.6vw rgba(255, 255, 255, 0.5);
+        margin-bottom: 2vh;
         backdrop-filter: blur(0.5vw);
         font-size: 4.5vw;
-        text-shadow: 0.2vw 0.2vw black;
+        
+
     
     }
     .temp{
-        border:0.1vw solid black;
-        width: 30%;
+        border:0.1vw solid white;
+        width: 55%;
         text-align: center;
-        height: 33vh;
+        height: 14vh;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         font-weight: bolder;
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 10%;
-        border-top: 0.1vw solid rgba(255, 255, 255, 0.5);
-        border-left: 0.1vw solid rgba(255, 255, 255, 0.5);
-        box-shadow: 0.6vw 0.6vw 0.6vw rgba(255, 255, 255, 0.5);
+       
         backdrop-filter: blur(0.5vw);
         font-size: 4.5vw;
-        text-shadow: 0.2vw 0.2vw black;
+        margin-bottom: 2vh;
     
     }
+    .img{
+        height:5vh;
+    }
+    
     .values{
-        font-size: 5.5vw;
+        font-size: 8vw;
+        margin-bottom: 0%;
     }
     .details{
         font-size: 3.5vw;
@@ -422,8 +513,5 @@ margin-top: 0.9%;
     }
     .try{
         font-size: 4.5vw;
-    }
-    .city{
-        margin-left: 2px;
     }
 }
